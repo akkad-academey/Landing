@@ -1,0 +1,341 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصة أكد التعليمية</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-fade-in {
+            opacity: 0;
+            animation: fadeIn 1s ease-in forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-delay-1 { animation-delay: 0.2s; }
+        .animate-delay-2 { animation-delay: 0.4s; }
+        .animate-delay-3 { animation-delay: 0.6s; }
+        
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+        .content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .feature-card {
+            transition: all 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .feature-card:hover .icon-wrapper {
+            background-color: #1d3c341a;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-green': '#1d3c34',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white">
+    <div id="particles-js"></div>
+    
+    <div class="content">
+        <!-- Simplified Navigation with Download Button -->
+        <nav class="container mx-auto px-4 sm:px-6 bg-white shadow-sm">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <img class="h-[70px]" src="logo.png" alt="">
+                    <div class="font-bold text-lg sm:text-xl text-dark-green">منصة أكد التعليمية</div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section - Improved Responsiveness -->
+        <section class="container mx-auto px-4 sm:px-6 py-8 sm:py-12 md:py-24 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-dark-green leading-tight animate-fade-in">
+                    تعلم في أي وقت، <br>
+                    <span class="text-dark-green">وفي أي مكان</span>
+                </h1>
+                <p class="text-base sm:text-lg text-gray-700 mt-4 sm:mt-6 animate-fade-in animate-delay-1">
+                    توفر لك منصة أكد التعليمية الوصول إلى آلاف الدورات، ومعلمين خبراء، وأدوات تعلم تفاعلية في تطبيق محمول سهل الاستخدام.
+                </p>
+                <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 animate-fade-in animate-delay-2">
+                    <a href="#download" class="bg-dark-green text-white px-4 sm:px-8 py-3 rounded-lg font-medium flex items-center justify-center hover:opacity-90 transition shadow-lg ml-0 sm:ml-4">
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6 ml-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path d="M99.617 8.057a50.191 50.191 0 00-38.815-6.713l230.932 230.933 74.846-74.846L99.617 8.057zM32.139 20.116c-6.441 8.563-10.148 19.077-10.148 30.199v411.358c0 11.123 3.708 21.636 10.148 30.199l235.877-235.877L32.139 20.116zM464.261 212.087l-67.266-37.637-81.544 81.544 81.548 81.548 67.273-37.64c16.117-9.03 25.738-25.442 25.738-43.908s-9.621-34.877-25.749-43.907zM291.733 279.711L60.815 510.629c3.786.891 7.639 1.371 11.492 1.371a50.275 50.275 0 0027.31-8.07l266.965-149.372-74.849-74.847z"></path>
+                        </svg>
+                        <h1 class="mr-2">جوجل بلاي</h1>
+                    </a>
+                    <a href="#download" class="bg-dark-green text-white px-4 sm:px-8 py-3 rounded-lg font-medium flex items-center justify-center hover:opacity-90 transition shadow-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="currentColor" d="M11.673 7.222c-.876 0-2.232-.996-3.66-.96c-1.884.024-3.612 1.092-4.584 2.784c-1.956 3.396-.504 8.412 1.404 11.172c.936 1.344 2.04 2.856 3.504 2.808c1.404-.06 1.932-.912 3.636-.912c1.692 0 2.172.912 3.66.876c1.512-.024 2.472-1.368 3.396-2.724c1.068-1.56 1.512-3.072 1.536-3.156c-.036-.012-2.94-1.128-2.976-4.488c-.024-2.808 2.292-4.152 2.4-4.212c-1.32-1.932-3.348-2.148-4.056-2.196c-1.848-.144-3.396 1.008-4.26 1.008m3.12-2.832c.78-.936 1.296-2.244 1.152-3.54c-1.116.048-2.46.744-3.264 1.68c-.72.828-1.344 2.16-1.176 3.432c1.236.096 2.508-.636 3.288-1.572"/></svg>
+                        <h1 class="mr-2">آب ستور</h1>
+                    </a>
+                    <a href="#download" class="bg-dark-green text-white px-4 sm:px-8 py-3 rounded-lg font-medium flex items-center justify-center hover:opacity-90 transition shadow-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path fill="currentColor" fill-opacity="0" stroke-dasharray="20" stroke-dashoffset="20" d="M12 4h2v6h2.5l-4.5 4.5M12 4h-2v6h-2.5l4.5 4.5"><animate attributeName="d" begin="0.5s" dur="1.5s" repeatCount="indefinite" values="M12 4h2v6h2.5l-4.5 4.5M12 4h-2v6h-2.5l4.5 4.5;M12 4h2v3h2.5l-4.5 4.5M12 4h-2v3h-2.5l4.5 4.5;M12 4h2v6h2.5l-4.5 4.5M12 4h-2v6h-2.5l4.5 4.5"/><animate fill="freeze" attributeName="fill-opacity" begin="0.7s" dur="0.5s" values="0;1"/><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.4s" values="20;0"/></path><path stroke-dasharray="14" stroke-dashoffset="14" d="M6 19h12"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.5s" dur="0.2s" values="14;0"/></path></g></svg>
+                        <h1 class="mr-2">تحميل مباشر</h1>
+                    </a>
+                </div>
+                <div class="mt-4 sm:mt-6 text-sm text-gray-500 animate-fade-in animate-delay-3">
+                    قريباً في متاجر التطبيقات
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="logo.png" alt="تطبيق منصة أكد" class="h-auto w-2/3 md:w-auto max-w-xs md:max-w-sm animate-float">
+            </div>
+        </section>
+
+        <!-- Features Section - Improved Responsiveness with Better Hover Effects -->
+        <section id="features" class="bg-gray-50 py-12 sm:py-20">
+            <div class="container mx-auto px-4 sm:px-6">
+                <h2 class="text-2xl sm:text-3xl font-bold text-center text-dark-green mb-8 sm:mb-16">لماذا تختار منصة أكد؟</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-12">
+                    <div class="feature-card p-4 sm:p-6 bg-[#e0ddd3] cursor-pointer rounded-xl shadow-lg">
+                        <div class="icon-wrapper p-3 rounded-full inline-block text-dark-green mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 sm:h-12 w-10 sm:w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                            </svg>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold text-dark-green mb-2">دورات متنوعة</h3>
+                        <p class="text-gray-600">الوصول إلى أهم الدورات في مختلف المراحل الدراسية، من المواد الأكاديمية.</p>
+                    </div>
+                    <div class="feature-card p-4 sm:p-6 bg-[#e0ddd3] cursor-pointer rounded-xl shadow-lg">
+                        <div class="icon-wrapper p-3 rounded-full inline-block text-dark-green mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 sm:h-12 w-10 sm:w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+                            </svg>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold text-dark-green mb-2">تعلم مخصص</h3>
+                        <p class="text-gray-600">توصيات مدعومة بالذكاء الاصطناعي تتكيف مع أسلوب التعلم والوتيرة والأهداف لتجربة مخصصة.</p>
+                    </div>
+                    <div class="feature-card p-4 sm:p-6 bg-[#e0ddd3] cursor-pointer rounded-xl shadow-lg">
+                        <div class="icon-wrapper p-3 rounded-full inline-block text-dark-green mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 sm:h-12 w-10 sm:w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                                
+                            </svg>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold text-dark-green mb-2">مجتمع من الخبراء</h3>
+                        <p class="text-gray-600">تواصل مع المدرسين والزملاء في مناقشات فورية ومشاريع تعاونية ومجموعات دراسية.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download Section -->
+        <section id="download" class="py-12 sm:py-20 bg-dark-green text-white">
+            <div class="container mx-auto px-4 sm:px-6 text-center">
+                <h2 class="text-2xl sm:text-4xl font-bold mb-4 sm:mb-8">هل أنت مستعد لتحويل تجربة التعلم الخاصة بك؟</h2>
+                <p class="text-base sm:text-xl mb-8 sm:mb-12 max-w-2xl mx-auto">انضم إلى آلاف المتعلمين الذين يحققون أهدافهم التعليمية والمهنية مع منصة أكد التعليمية.</p>
+                
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-8 sm:mb-12">
+                    <a href="#" class="bg-white text-dark-green px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-medium flex items-center justify-center hover:bg-gray-100 transition shadow-lg ml-0 sm:ml-4">
+                        <svg class="w-6 h-6 sm:w-8 sm:h-8 ml-2 sm:ml-4" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path d="M99.617 8.057a50.191 50.191 0 00-38.815-6.713l230.932 230.933 74.846-74.846L99.617 8.057zM32.139 20.116c-6.441 8.563-10.148 19.077-10.148 30.199v411.358c0 11.123 3.708 21.636 10.148 30.199l235.877-235.877L32.139 20.116zM464.261 212.087l-67.266-37.637-81.544 81.544 81.548 81.548 67.273-37.64c16.117-9.03 25.738-25.442 25.738-43.908s-9.621-34.877-25.749-43.907zM291.733 279.711L60.815 510.629c3.786.891 7.639 1.371 11.492 1.371a50.275 50.275 0 0027.31-8.07l266.965-149.372-74.849-74.847z"></path>
+                        </svg>
+                        تحميل من جوجل بلاي
+                    </a>
+                    <a href="#" class="bg-white text-dark-green px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-medium flex items-center justify-center hover:bg-gray-100 transition shadow-lg">
+                        <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M11.673 7.222c-.876 0-2.232-.996-3.66-.96c-1.884.024-3.612 1.092-4.584 2.784c-1.956 3.396-.504 8.412 1.404 11.172c.936 1.344 2.04 2.856 3.504 2.808c1.404-.06 1.932-.912 3.636-.912c1.692 0 2.172.912 3.66.876c1.512-.024 2.472-1.368 3.396-2.724c1.068-1.56 1.512-3.072 1.536-3.156c-.036-.012-2.94-1.128-2.976-4.488c-.024-2.808 2.292-4.152 2.4-4.212c-1.32-1.932-3.348-2.148-4.056-2.196c-1.848-.144-3.396 1.008-4.26 1.008m3.12-2.832c.78-.936 1.296-2.244 1.152-3.54c-1.116.048-2.46.744-3.264 1.68c-.72.828-1.344 2.16-1.176 3.432c1.236.096 2.508-.636 3.288-1.572"/></svg>
+
+                        تحميل من آب ستور
+                    </a>
+                </div>
+                
+                <p class="text-gray-300">قريباً في متاجر التطبيقات</p>
+                
+                <div class="mt-8 sm:mt-12 flex justify-center">
+                    <div class="relative">
+                        <img src="logowhite.png" alt=" تطبيق منصة أكد" class="relative w-full max-w-md sm:max-w-lg">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Simplified Footer -->
+        <footer class="bg-white border-t border-gray-200 py-6 sm:py-8">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="mb-4 md:mb-0">
+                        <div class="font-bold text-xl sm:text-2xl text-dark-green mb-2">منصة أكد التعليمية</div>
+                        <p class="text-gray-600 max-w-xs">تحويل طريقة تعلم العالم من خلال التعليم المحمول المخصص.</p>
+                    </div>
+                    
+                    <div class="flex gap-4">
+                        <a href="#" class="text-dark-green hover:text-gray-600 transition mr-4 sm:mr-6">اتصل بنا</a>
+                        <a href="#" class="text-dark-green hover:text-gray-600 transition mr-4 sm:mr-6">الدعم</a>
+                    </div>
+                </div>
+                
+                <div class="border-t border-gray-200 mt-4 sm:mt-6 pt-4 sm:pt-6 text-center">
+                    <p class="text-gray-500 text-sm">© 2025 منصة أكد التعليمية. جميع الحقوق محفوظة.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Initialize Particles JS
+        document.addEventListener('DOMContentLoaded', function() {
+            particlesJS('particles-js', {
+                "particles": {
+                    "number": {
+                        "value": 100,
+                        "density": {
+                            "enable": true,
+                            "value_area": 800
+                        }
+                    },
+                    "color": {
+                        "value": "#1d3c34"
+                    },
+                    "shape": {
+                        "type": "circle",
+                        "stroke": {
+                            "width": 0,
+                            "color": "#1d3c34"
+                        },
+                        "polygon": {
+                            "nb_sides": 5
+                        }
+                    },
+                    "opacity": {
+                        "value": 0.2,
+                        "random": false,
+                        "anim": {
+                            "enable": false,
+                            "speed": 1,
+                            "opacity_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "size": {
+                        "value": 3,
+                        "random": true,
+                        "anim": {
+                            "enable": false,
+                            "speed": 40,
+                            "size_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "line_linked": {
+                        "enable": true,
+                        "distance": 150,
+                        "color": "#1d3c34",
+                        "opacity": 0.15,
+                        "width": 1
+                    },
+                    "move": {
+                        "enable": true,
+                        "speed": 2,
+                        "direction": "none",
+                        "random": false,
+                        "straight": false,
+                        "out_mode": "out",
+                        "bounce": false,
+                        "attract": {
+                            "enable": false,
+                            "rotateX": 600,
+                            "rotateY": 1200
+                        }
+                    }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {
+                        "onhover": {
+                            "enable": true,
+                            "mode": "grab"
+                        },
+                        "onclick": {
+                            "enable": true,
+                            "mode": "push"
+                        },
+                        "resize": true
+                    },
+                    "modes": {
+                        "grab": {
+                            "distance": 140,
+                            "line_linked": {
+                                "opacity": 1
+                            }
+                        },
+                        "bubble": {
+                            "distance": 400,
+                            "size": 40,
+                            "duration": 2,
+                            "opacity": 8,
+                            "speed": 3
+                        },
+                        "repulse": {
+                            "distance": 200,
+                            "duration": 0.4
+                        },
+                        "push": {
+                            "particles_nb": 4
+                        },
+                        "remove": {
+                            "particles_nb": 2
+                        }
+                    }
+                },
+                "retina_detect": true
+            });
+        });
+        
+        // Animation on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const animatedElements = document.querySelectorAll('.animate-fade-in');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationPlayState = 'running';
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            
+            animatedElements.forEach(element => {
+                element.style.animationPlayState = 'paused';
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>
